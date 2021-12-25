@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    background-color: cadetblue;
+    background: linear-gradient(15deg, #848482 30%, #b0c4de 70%);
+    display: grid;
+    place-items: center;
+}
+.box{
+    height: 350px;
+    width: 300px;
+    background-color: #141f23;
+    position: relative;
+    border-bottom: 10px solid #141f23;
+    box-shadow: 0 0 0.75vmin 0.75vmin #1115;
+}
+.neck{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 40px;
+    background-color: #fbc5b7;
+}
+.face{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 190px;
+    background-color: #fbc5b7;
+    border-radius: 55px;
+    overflow: hidden;
+    z-index: 2;
+}
+.face::before{
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    /* transform: translate(-50%, -50%); */
+    width: 45px;
+    height: 100px;
+    border-radius: 0 0 20px 0;
+    background-color: #d5b1a8;
+}
+.face::after{
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    /* transform: translate(-50%, -50%); */
+    width: 45px;
+    height: 100px;
+    border-radius: 0 0 0 20px;
+    background-color: #d5b1a8;
+}
+.ear{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.earl{
+    position: absolute;
+    bottom: 123.5px;
+    left: 62.5px;
+    transform: translate(-60%, 50%);
+    background-color: #fbc5b7;
+}
+.earr{
+    position: absolute;
+    bottom: 123.5px;
+    right: 62.5px;
+    transform: translate(60%, 50%);
+    background-color: #fbc5b7;
+}
+.eye{
+    height: 30px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: #4c4b4c;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-120%, 0%);
+    box-shadow: -3px 0px 0 12px  #fff,
+                30px 0px 0 0px #4c4b4c,
+                33px 0px 0 12px  #fff
+                ;
+}
+.nose{
+    height: 35px;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    background-color: #fbc5b7;
+    background-color: aqua;
+    border-radius: 35px;
+    z-index: 2;
+}
+.nose::before{
+    content: '';
+    position: absolute;
+    bottom: -27px;
+    left: 45%;
+    transform: translateX(-50%) rotate(60deg);
+    height: 40px;
+    width: 25px;
+    border-radius: 25px;
+    background-color: #a56644;
+    z-index: 1;
+}
+.nose::after{
+    content: '';
+    position: absolute;
+    bottom: -27px;
+    left: 55%;
+    transform: translateX(-50%) rotate(-60deg);
+    height: 40px;
+    width: 25px;
+    border-radius: 25px;
+    background-color: #a56644;
+    z-index: 1;
+}
+.nose2{
+    height: 35px;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    background-color: #fbc5b7;
+    /* background-color: aqua; */
+    border-radius: 35px;
+    z-index: 2;
+}
+.curve{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 15px;
+    width: 70px;
+    background-color: #e3a291;
+    border-radius: 10px;
+    /* transform: rotate(30deg); */
+}
+.hair{
+    position: absolute;
+    bottom: 245px;
+    left: 50%;
+    height: 40px;
+    width: 50px;
+    background-color: #a56644;
+    border-radius: 50px 0px 50px 0px;
+    box-shadow: 6.5px 0 0 7px #a56644,
+                -6.5px 0 0 7px #a56644;
+    transform:translateX(-30%) rotate(-5deg);
+}
+
+    </style>
+    <main>
+        <div class="box">
+            <div class="neck"></div>
+            <div class="face">
+                <div class="eye"></div>
+                <div class="nose"></div>
+                <div class="nose2"></div>
+                <div class="curve"></div>
+            </div>
+            <div class="ear earl"></div>
+            <div class="ear earr"></div>
+            <div class="hair"></div>
+            
+        </div>
+    </main>
+</body>
+</html>
